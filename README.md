@@ -1,4 +1,4 @@
-# RC5 Entryption Algorithm implementation in Rust
+# RC5 Encryption Algorithm implementation in Rust
 
 This crate implements the RC5 algorithm described by Ronald Rivest in this paper: https://www.grc.com/r&d/rc5.pdf
 
