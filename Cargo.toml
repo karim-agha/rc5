@@ -1,0 +1,12 @@
+[package]
+name = "rc5"
+edition = "2021"
+version = "0.1.0"
+authors = ["Karim Agha <karim.dev@gmail.com>"]
+keywords = ["rc5", "cryptography", "encryption", "security"]
+
+[dependencies]
+num = "0.4"
+num-bytes = "0.4"
+thiserror = "1.0"
+secrecy = "0.8"
