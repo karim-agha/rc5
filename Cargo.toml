@@ -1,5 +1,5 @@
 [package]
-name = "rs-rc5"
+name = "rc5-rs"
 edition = "2021"
 version = "0.1.0"
 authors = ["Karim Agha <karim.dev@gmail.com>"]
