@@ -18,15 +18,14 @@ pub mod word;
 
 /// RC5 Context
 ///
-/// This struct holds the expanded key and the number of rounds that the
-/// algorithm will use. Use this struct if you are going to encrypt or
-/// decrypt multiple buffers of data with the same key.
+/// This struct holds the expanded key that the algorithm will use.
+/// Use this struct if you are going to encrypt or decrypt multiple buffers
+/// of data with the same key.
 ///
 /// Otherwise you can use the shorthand free standing functions encrypt and
 /// decrypt.
 pub struct Context<W: Word = u32> {
-  pub expanded_key: SecretVec<W>,
-  pub rounds: usize,
+  expanded_key: SecretVec<W>,
 }
 
 impl<W: Word> Context<W> {
@@ -36,7 +35,6 @@ impl<W: Word> Context<W> {
 
     Ok(Self {
       expanded_key: SecretVec::new(expanded_key),
-      rounds,
     })
   }
 
@@ -108,7 +106,7 @@ impl<W: Word> Context<W> {
 /// Usage example:
 ///
 /// ```
-/// use rc5::encrypt;
+/// use rc5_rs::encrypt;
 /// let key = [
 ///   0x2B, 0xD6, 0x45, 0x9F, 0x82, 0xC5, 0xB3, 0x00, 0x95, 0x2C, 0x49, 0x10,
 ///   0x48, 0x81, 0xFF, 0x48,
@@ -139,7 +137,7 @@ pub fn encrypt<W: Word>(
 /// Usage example:
 ///
 /// ```
-/// use rc5::decrypt;
+/// use rc5_rs::decrypt;
 /// let key = [
 ///   0x2B, 0xD6, 0x45, 0x9F, 0x82, 0xC5, 0xB3, 0x00, 0x95, 0x2C, 0x49, 0x10,
 ///   0x48, 0x81, 0xFF, 0x48,
@@ -166,7 +164,7 @@ pub fn decrypt<W: Word>(
 /// Usage example:
 ///
 /// ```
-/// use rc5::encrypt_default;
+/// use rc5_rs::encrypt_default;
 /// let key = [
 ///   0x2B, 0xD6, 0x45, 0x9F, 0x82, 0xC5, 0xB3, 0x00, 0x95, 0x2C, 0x49, 0x10,
 ///   0x48, 0x81, 0xFF, 0x48,
@@ -189,7 +187,7 @@ pub fn encrypt_default(
 /// Usage example:
 ///
 /// ```
-/// use rc5::decrypt_default;
+/// use rc5_rs::decrypt_default;
 /// let key = [
 ///   0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B,
 ///   0x0C, 0x0D, 0x0E, 0x0F,
