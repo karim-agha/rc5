@@ -1,10 +1,12 @@
 [package]
 name = "rc5-rs"
 edition = "2021"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Karim Agha <karim.dev@gmail.com>"]
 keywords = ["rc5", "cryptography", "encryption", "security"]
 description = "RC5 Encryption Algorithm implementation in Rust"
+readme = "README.md"
+repository = "https://github.com/karim-agha/rc5"
 license = "GPL-3.0"
 
 [dependencies]
