@@ -1,6 +1,6 @@
 //! RC5 Smoke tests
 
-use rc5::{decrypt_default, encrypt, encrypt_default};
+use rs_rc5::{decrypt_default, encrypt, encrypt_default};
 
 #[test]
 fn encode_then_decode() {
