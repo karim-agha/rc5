@@ -4,6 +4,8 @@ edition = "2021"
 version = "0.1.0"
 authors = ["Karim Agha <karim.dev@gmail.com>"]
 keywords = ["rc5", "cryptography", "encryption", "security"]
+description = "RC5 Encryption Algorithm implementation in Rust"
+license = "GPL-3.0"
 
 [dependencies]
 num = "0.4"
