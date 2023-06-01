@@ -51,7 +51,7 @@ impl<W: Word> Context<W> {
       return Err(Error::InvalidInputLength);
     }
 
-    let mut ciphertext = Vec::new();
+    let mut ciphertext = Vec::with_capacity(plaintext.len());
     for block in plaintext.chunks(block_size) {
       let block = [
         W::from_le_bytes(&block[0..word_bytes])?,
@@ -77,7 +77,7 @@ impl<W: Word> Context<W> {
       return Err(Error::InvalidInputLength);
     }
 
-    let mut plaintext = Vec::new();
+    let mut plaintext = Vec::with_capacity(ciphertext.len());
     for block in ciphertext.chunks(block_size) {
       let block = [
         W::from_le_bytes(&block[0..word_bytes])?,
